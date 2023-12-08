@@ -1,0 +1,14 @@
+version: '3'
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "100:80"
+    volumes:
+      - nginx-data:/var/opt/nginx
+
+volumes:
+  nginx-data:
+
